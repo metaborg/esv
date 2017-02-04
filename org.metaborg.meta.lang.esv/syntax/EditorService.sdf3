@@ -13,6 +13,7 @@ imports
   RefactoringsService	
   RecoveryRules	
   MenusService	
+  ShellService
   Views
 
 context-free start-symbols

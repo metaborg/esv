@@ -1,0 +1,11 @@
+module ShellService
+
+imports
+
+  Common
+  SemanticServices
+
+context-free syntax
+	Section.Shell = <shell <ShellProperty*>>
+	ShellProperty.EvaluationMethod = <evaluation method : <String>>
+	ShellProperty.ShellStartSymbol = <shell start symbol : <Sort>>
