@@ -51,7 +51,6 @@ context-free syntax
   ContextType.None = <none>
   ContextType.Legacy = <legacy>
   ContextType.TaskEngine = <taskengine> 
-  ContextType.ScopeGraph = <scopegraph> 
   LanguageProperty.Context = <context : <ContextType>>
   ObserverOption.Constraint = <( constraint )> 
   ObserverOption.MultiFile = <( multifile )> 
