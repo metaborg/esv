@@ -12,6 +12,8 @@ sorts
 lexical syntax
 
   StrategoId = [a-zA-Z\_] [a-zA-Z0-9\'\-\_]* 
+  JavaId = [A-Za-z\_\$] [A-Za-z0-9\_\$]*
+  QualJavaId = {JavaId "."}*
   SemanticNode = "_" 
 
 lexical restrictions
@@ -23,4 +25,5 @@ context-free syntax
   SemanticNode = Node 
   StrategoCall.Strategy = StrategoId 
   StrategoCall.Attribute = <id . <StrategoId>> 
+  StrategoCall.Java = <java:<QualJavaId>> 
   OnSaveAnno.None =  
