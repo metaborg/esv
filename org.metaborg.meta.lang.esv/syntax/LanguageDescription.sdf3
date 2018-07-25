@@ -34,7 +34,7 @@ context-free syntax
   LanguageProperty.Extensions = <extensions : <PropertyValues>> 
   LanguageProperty.Description = <description : <PropertyValue>> 
   LanguageProperty.Table = <table : <PropertyValue>> 
-  LanguageProperty.TableProvider = <table provider : <StrategoCall>> 
+  LanguageProperty.TableProvider = <table provider : <StrategoOrJavaCall>> 
   LanguageProperty.StartSymbols = <start symbols : <Sort*>> 
   LanguageProperty.StartSymbols = <start symbols : <PropertyValues>> {avoid}
   LanguageProperty.Parser = <parser : <PropertyValue>>
@@ -42,9 +42,9 @@ context-free syntax
   LanguageProperty.Extends = <extends : <PropertyValues>> 
   LanguageProperty.Aliases = <aliases : <PropertyValues>> 
   LanguageProperty.UnmanagedTablePrefix = <unmanaged table : <Id> *> 
-  LanguageProperty.Disambiguator = <disambiguator : <StrategoCall>> 
+  LanguageProperty.Disambiguator = <disambiguator : <StrategoOrJavaCall>> 
   LanguageProperty.FlattenUnicode = <unicode flatten : <TrueOrFalse>> 
-  LanguageProperty.SemanticObserver = <observer : <StrategoCall> <ObserverOption*>> 
+  LanguageProperty.SemanticObserver = <observer : <StrategoOrJavaCall> <ObserverOption*>> 
   LanguageProperty.SemanticProvider = <provider : <PropertyValue>> 
   LanguageProperty.LanguageIncludes = <<PropertyValue> includes : <PropertyValues>> 
   LanguageProperty.LanguageSources = <<PropertyValue> sources : <PropertyValues>>
@@ -54,7 +54,7 @@ context-free syntax
   LanguageProperty.Context = <context : <ContextType>>
   ObserverOption.Constraint = <( constraint )> 
   ObserverOption.MultiFile = <( multifile )> 
-  LanguageProperty.OnSave = <on save : <StrategoCall> <OnSaveAnno>> 
+  LanguageProperty.OnSave = <on save : <StrategoOrJavaCall> <OnSaveAnno>> 
   LanguageProperty.LineCommentPrefix = <line comment : <PropertyValue>> 
   LanguageProperty.BlockCommentDefs = <block comment : <BlockCommentDef>> 
   LanguageProperty.FenceDefs = <fences : <FenceDef*>> 

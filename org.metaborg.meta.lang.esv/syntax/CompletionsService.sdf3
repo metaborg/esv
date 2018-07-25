@@ -17,7 +17,7 @@ syntax
 context-free syntax
 
   CompletionRule.CompletionTrigger = <completion trigger : <PropertyValue> <OptCompletionAnno>> 
-  CompletionRule.CompletionProposer = <completion proposer <SemanticNode*> : <StrategoCall>> 
+  CompletionRule.CompletionProposer = <completion proposer <SemanticNode*> : <StrategoOrJavaCall>> 
   CompletionRule.CompletionKeyword = <completion keyword : <PropertyValue> <OptCompletionAnno>> 
   CompletionRule.CompletionTemplateEx = <completion template <Sort*> : <CompletionPrefix> <CompletionPart+> <CompletionAnno*>> 
   CompletionPrefix.NoCompletionPrefix =  
@@ -25,13 +25,13 @@ context-free syntax
 
 context-free syntax
 
-  StrategoCall = <completions> {reject}
-  StrategoCall = <completion> {reject}
-  StrategoCall = <identifier> {reject}
-  StrategoCall = <observer> {reject}
-  StrategoCall = <builder> {reject}
-  StrategoCall = <occurrence> {reject}
-  StrategoCall = ReservedName {reject}
+  StrategoOrJavaCall = <completions> {reject}
+  StrategoOrJavaCall = <completion> {reject}
+  StrategoOrJavaCall = <identifier> {reject}
+  StrategoOrJavaCall = <observer> {reject}
+  StrategoOrJavaCall = <builder> {reject}
+  StrategoOrJavaCall = <occurrence> {reject}
+  StrategoOrJavaCall = ReservedName {reject}
   CompletionPart = String 
   CompletionPart.Placeholder = Placeholder 
   CompletionPart.Cursor = <(cursor)> 

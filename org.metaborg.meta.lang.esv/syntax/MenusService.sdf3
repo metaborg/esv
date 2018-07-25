@@ -9,7 +9,7 @@ context-free syntax
 
   Section.Menus = <menus <Menu*>> 
   Menu.ToolbarMenu = <menu : <MenuID> <MenusOption*> <MenuContrib*>> 
-  MenuContrib.Action = <action : <String> = <StrategoCall> <MenusOption*>> 
+  MenuContrib.Action = <action : <String> = <StrategoOrJavaCall> <MenusOption*>> 
   MenuContrib.Submenu = <submenu : <String> <MenusOption*> <MenuContrib*> end> 
   MenuContrib.Separator = <separator> 
   MenuID.Label = String 

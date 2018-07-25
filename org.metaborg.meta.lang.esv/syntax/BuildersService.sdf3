@@ -13,10 +13,10 @@ syntax
 
 context-free syntax
 
-  BuilderRule.SemanticObserverDeprecated = <observer : <StrategoCall> <ObserverOption*>> 
+  BuilderRule.SemanticObserverDeprecated = <observer : <StrategoOrJavaCall> <ObserverOption*>> 
   BuilderRule.SemanticProviderDeprecated = <provider : <PropertyValue>> 
-  BuilderRule.OnSaveDeprecated = <on save : <StrategoCall> <OnSaveAnno>> 
-  BuilderRule.Builder = <builder : <String> = <StrategoCall> <BuilderOption*>> 
+  BuilderRule.OnSaveDeprecated = <on save : <StrategoOrJavaCall> <OnSaveAnno>> 
+  BuilderRule.Builder = <builder : <String> = <StrategoOrJavaCall> <BuilderOption*>> 
   BuilderRule.BuilderCaption = <builder caption : <PropertyValue>> 
   BuilderOption.OpenEditor = <(openeditor)> 
   BuilderOption.RealTime = <(realtime)> 

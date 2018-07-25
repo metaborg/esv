@@ -24,8 +24,8 @@ context-free syntax
   CompletionRule.CompletionTemplateWithSort = <completion template : <Sort> = <CompletionPart> <CompletionPart*> <OptCompletionAnno>> {avoid, deprecated("Move the sort before ':' and remove '='")}
   CompletionAnno.Disable = <(disable)> {deprecated("Use (disabled) instead")}
   FoldingAnno.Disable = <(disable)> {deprecated("Use (disabled) instead")}
-  RefactoringRule.PPTable = <pp-table : <StrategoCall>> {deprecated("use 'pretty-print' instead")}
-  ReferenceRule.ReferenceHoverRule = <reference <SemanticNode> : <StrategoCall> <StrategoCall>> {deprecated}
+  RefactoringRule.PPTable = <pp-table : <StrategoOrJavaCall>> {deprecated("use 'pretty-print' instead")}
+  ReferenceRule.ReferenceHoverRule = <reference <SemanticNode> : <StrategoOrJavaCall> <StrategoOrJavaCall>> {deprecated}
   BuilderRule = RefactoringRule {deprecated("Refactoring rules must be defined in their own section in MyLang-Refactorings.esv")}
 
 lexical syntax

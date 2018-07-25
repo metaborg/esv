@@ -8,9 +8,9 @@ imports
 context-free syntax
 
   Section.Views = <views <View*>> 
-  View.OutlineView = <outline view : <StrategoCall> <OutlineOption*> <ExpandToLevel?>> 
+  View.OutlineView = <outline view : <StrategoOrJavaCall> <OutlineOption*> <ExpandToLevel?>> 
   OutlineOption.Source = <( source )> 
   OutlineOption.OnSelection = <( onselection )> 
   ExpandToLevel.ExpandToLevel = <expand to level : <Int>> 
-  View.PropertiesView = <properties view : <StrategoCall> <PropertiesOption*>> 
+  View.PropertiesView = <properties view : <StrategoOrJavaCall> <PropertiesOption*>> 
   PropertiesOption.Source = <( source )> 

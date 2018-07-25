@@ -7,7 +7,7 @@ imports
 
 sorts
 
-  SemanticNode StrategoId StrategoCall OnSaveAnno
+  SemanticNode StrategoId StrategoOrJavaCall OnSaveAnno
 
 lexical syntax
 
@@ -23,7 +23,7 @@ lexical restrictions
 context-free syntax
 
   SemanticNode = Node 
-  StrategoCall.Strategy = StrategoId 
-  StrategoCall.Attribute = <id . <StrategoId>> 
-  StrategoCall.Java = <java:<QualJavaId>> 
+  StrategoOrJavaCall.Strategy = StrategoId 
+  StrategoOrJavaCall.Attribute = <id . <StrategoId>> 
+  StrategoOrJavaCall.Java = <java:<QualJavaId>> 
   OnSaveAnno.None =  

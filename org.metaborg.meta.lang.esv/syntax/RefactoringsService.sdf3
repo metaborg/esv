@@ -15,9 +15,9 @@ syntax
 
 context-free syntax
 
-  RefactoringRule.PrettyPrint = <pretty-print : <StrategoCall>> 
-  RefactoringRule.TextReconstruction = <text reconstruction : <StrategoCall>> 
-  RefactoringRule.Refactoring = <refactoring <SemanticNode*> : <String> = <StrategoCall> <BuilderOption*> <UIOption*>> 
+  RefactoringRule.PrettyPrint = <pretty-print : <StrategoOrJavaCall>> 
+  RefactoringRule.TextReconstruction = <text reconstruction : <StrategoOrJavaCall>> 
+  RefactoringRule.Refactoring = <refactoring <SemanticNode*> : <String> = <StrategoOrJavaCall> <BuilderOption*> <UIOption*>> 
   UIOption.Shortcut = <shortcut : <KeyCombination>> 
   UIOption.Shortcut = <shortcut : <InteractionId>> 
   InteractionId.InteractionId = String 
@@ -33,10 +33,10 @@ context-free syntax
   SemanticNode = <pp-table> {reject}
   SemanticNode = <pretty-print> {reject}
   SemanticNode = <refactoring> {reject}
-  StrategoCall = <refactorings> {reject}
-  StrategoCall = <refactoring> {reject}
-  StrategoCall = <pretty-print> {reject}
-  StrategoCall = <keybindings> {reject}
+  StrategoOrJavaCall = <refactorings> {reject}
+  StrategoOrJavaCall = <refactoring> {reject}
+  StrategoOrJavaCall = <pretty-print> {reject}
+  StrategoOrJavaCall = <keybindings> {reject}
 
 context-free syntax
 

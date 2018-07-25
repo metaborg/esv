@@ -12,12 +12,12 @@ syntax
 
 context-free syntax
 
-  ReferenceRule.ReferenceRule = <reference <SemanticNode> : <StrategoCall>> 
-  ReferenceRule.HoverRule = <hover <SemanticNode> : <StrategoCall>> 
-  ReferenceRule.OccurrenceRule = <occurrence <SemanticNode> : <StrategoCall>> 
+  ReferenceRule.ReferenceRule = <reference <SemanticNode> : <StrategoOrJavaCall>> 
+  ReferenceRule.HoverRule = <hover <SemanticNode> : <StrategoOrJavaCall>> 
+  ReferenceRule.OccurrenceRule = <occurrence <SemanticNode> : <StrategoOrJavaCall>> 
 
 context-free syntax
 
-  StrategoCall = <references> {reject}
-  StrategoCall = <reference> {reject}
-  StrategoCall = <hover> {reject}
+  StrategoOrJavaCall = <references> {reject}
+  StrategoOrJavaCall = <reference> {reject}
+  StrategoOrJavaCall = <hover> {reject}
