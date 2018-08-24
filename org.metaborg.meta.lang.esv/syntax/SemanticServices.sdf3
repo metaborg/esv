@@ -24,6 +24,7 @@ context-free syntax
 
   SemanticNode = Node 
   StrategoOrJavaCall.Strategy = StrategoId 
-  StrategoOrJavaCall.Attribute = <id . <StrategoId>> 
-  StrategoOrJavaCall.Java = <java:<QualJavaId>> 
+  StrategoOrJavaCall.Attribute = <id . <StrategoId>>
+  StrategoOrJavaCall.Java = <java:<QualJavaId>>
+  StrategoOrJavaCall.Generated = <generated>
   OnSaveAnno.None =  
