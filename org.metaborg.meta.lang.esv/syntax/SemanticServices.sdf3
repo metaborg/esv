@@ -26,5 +26,5 @@ context-free syntax
   StrategoOrJavaCall.Strategy = StrategoId 
   StrategoOrJavaCall.Attribute = <id . <StrategoId>>
   StrategoOrJavaCall.Java = <java:<QualJavaId>>
-  StrategoOrJavaCall.Generated = <generated>
+  StrategoOrJavaCall.JavaGenerated = <java-generated>
   OnSaveAnno.None =  
