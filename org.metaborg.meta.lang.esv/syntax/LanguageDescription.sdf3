@@ -35,6 +35,7 @@ context-free syntax
   LanguageProperty.Description = <description : <PropertyValue>> 
   LanguageProperty.Table = <table : <PropertyValue>> 
   LanguageProperty.TableProvider = <table provider : <StrategoCall>> 
+  LanguageProperty.Imploder = <imploder : <ImploderSetting>>
   LanguageProperty.StartSymbols = <start symbols : <Sort*>> 
   LanguageProperty.StartSymbols = <start symbols : <PropertyValues>> {avoid}
   LanguageProperty.Parser = <parser : <PropertyValue>>
@@ -48,6 +49,8 @@ context-free syntax
   LanguageProperty.SemanticProvider = <provider : <PropertyValue>> 
   LanguageProperty.LanguageIncludes = <<PropertyValue> includes : <PropertyValues>> 
   LanguageProperty.LanguageSources = <<PropertyValue> sources : <PropertyValues>>
+  ImploderSetting.Java = <java>
+  ImploderSetting.Stratego = <stratego>
   ContextType.None = <none>
   ContextType.Legacy = <legacy>
   ContextType.TaskEngine = <taskengine> 
