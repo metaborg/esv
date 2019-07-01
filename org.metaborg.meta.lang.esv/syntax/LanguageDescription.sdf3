@@ -38,7 +38,6 @@ context-free syntax
   LanguageProperty.Imploder = <imploder : <ImploderSetting>>
   LanguageProperty.StartSymbols = <start symbols : <Sort*>> 
   LanguageProperty.StartSymbols = <start symbols : <PropertyValues>> {avoid}
-  LanguageProperty.Parser = <parser : <PropertyValue>>
   LanguageProperty.URL = <url : <URL>> 
   LanguageProperty.Extends = <extends : <PropertyValues>> 
   LanguageProperty.Aliases = <aliases : <PropertyValues>> 
@@ -48,6 +47,10 @@ context-free syntax
   LanguageProperty.SemanticObserver = <observer : <StrategoCall> <ObserverOption*>> 
   LanguageProperty.SemanticProvider = <provider : <PropertyValue>> 
   LanguageProperty.LanguageIncludes = <<PropertyValue> includes : <PropertyValues>> 
+  ParserType.None  = <none>
+  ParserType.Named = PropertyValue
+  PropertyValue = <none> {reject}
+  LanguageProperty.Parser = <parser : <ParserType>>
   LanguageProperty.LanguageSources = <<PropertyValue> sources : <PropertyValues>>
   ImploderSetting.Java = <java>
   ImploderSetting.Stratego = <stratego>
