@@ -2,36 +2,36 @@ module Common
 
 imports
 
-  LanguageDescription // To import ReservedName sort 
+  LanguageDescription // To import ReservedName sort
 
 sorts
 
-  Id IdStar Int STRING BACKSLASH String Node Sort Constructor ConstructorId SectionName ModuleName Eof Ws ShortCom 
+  Id IdStar Int STRING BACKSLASH String Node Sort Constructor ConstructorId SectionName Eof Ws ShortCom
   LongCom CommChar
 
 lexical syntax
 
-  Id = [a-zA-Z] [a-zA-Z0-9\'\-\_]* 
-  IdStar = [a-zA-Z] [a-zA-Z0-9\'\-\_]* "*" 
-  Int = "-"? [0-9]+ 
-  STRING = "\"" StringChar* "\"" 
-  StringChar = ~[\"\n] 
-  StringChar = "\\\"" 
-  StringChar = BACKSLASH 
-  BACKSLASH = "\\" 
-  SectionName = ~[\/\n\r]* 
-  Ws = [\t\ \n\r] 
-  ShortCom = "//" ~[\n]* Alt1 
-  Alt1 = [\n] 
-  Alt1 = Eof 
-  LongCom = "/*" CommChar* "*/" 
-  CommChar = ~[\*] 
-  CommChar = Asterisk 
-  Asterisk = "*" 
-  LAYOUT = Ws 
-  LAYOUT = ShortCom 
-  LAYOUT = LongCom 
-  Eof =  
+  Id = [a-zA-Z] [a-zA-Z0-9\'\-\_]*
+  IdStar = [a-zA-Z] [a-zA-Z0-9\'\-\_]* "*"
+  Int = "-"? [0-9]+
+  STRING = "\"" StringChar* "\""
+  StringChar = ~[\"\n]
+  StringChar = "\\\""
+  StringChar = BACKSLASH
+  BACKSLASH = "\\"
+  SectionName = ~[\/\n\r]*
+  Ws = [\t\ \n\r]
+  ShortCom = "//" ~[\n]* Alt1
+  Alt1 = [\n]
+  Alt1 = Eof
+  LongCom = "/*" CommChar* "*/"
+  CommChar = ~[\*]
+  CommChar = Asterisk
+  Asterisk = "*"
+  LAYOUT = Ws
+  LAYOUT = ShortCom
+  LAYOUT = LongCom
+  Eof =
 
 lexical restrictions
 
@@ -50,14 +50,14 @@ context-free restrictions
 
 context-free syntax
 
-  Sort.Sort = Id 
-  Sort.ListSort = <<Id> *> 
-  String.String = STRING 
+  Sort.Sort = Id
+  Sort.ListSort = <<Id> *>
+  String.String = STRING
   Sort = <<Sort> . _> {bracket}
-  Constructor.ConstructorOnly = <_ . <ConstructorId>> 
-  ConstructorId.Constructor = Id 
-  Node = Sort 
-  Node = Constructor 
-  Node.SortAndConstructor = <<Sort> . <ConstructorId>> 
+  Constructor.ConstructorOnly = <_ . <ConstructorId>>
+  ConstructorId.Constructor = Id
+  Node = Sort
+  Node = Constructor
+  Node.SortAndConstructor = <<Sort> . <ConstructorId>>
   Node = ReservedName {reject}
   ModuleName = ReservedName {reject}
