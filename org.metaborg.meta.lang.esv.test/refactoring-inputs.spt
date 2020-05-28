@@ -12,7 +12,7 @@ refactorings
 
 test identifier with default init [[
 identifier : "foo"
-]] parse to IdInputField(String("\"foo\""),"")
+]] parse to IdInputFieldDefault(String("\"foo\""))
 
 test identifier with init [[
 identifier : "foo" = "bar"
@@ -20,7 +20,7 @@ identifier : "foo" = "bar"
 
 test text with default init [[
 text : "foo"
-]] parse to TextInputField(String("\"foo\""),"")
+]] parse to TextInputFieldDefault(String("\"foo\""))
 
 test text with init [[
 text : "foo" = "bar"
@@ -28,8 +28,22 @@ text : "foo" = "bar"
 
 test boolean with default init [[
 boolean : "foo"
-]] parse to BooleanInputField(String("\"foo\""),FalseValue())
+]] parse to BooleanInputFieldDefault(String("\"foo\""))
 
 test boolean with init [[
 boolean : "foo" = true
 ]] parse to BooleanInputField(String("\"foo\""),TrueValue())
+
+// Desugaring
+
+test desugar identifier with default init [[
+identifier : "foo"
+]] run desugar-all to IdInputField(String("\"foo\""),"")
+
+test desugar text with default init [[
+text : "foo"
+]] run desugar-all to TextInputField(String("\"foo\""),"")
+
+test desugar boolean with default init [[
+boolean : "foo"
+]] run desugar-all to BooleanInputField(String("\"foo\""),FalseValue())
