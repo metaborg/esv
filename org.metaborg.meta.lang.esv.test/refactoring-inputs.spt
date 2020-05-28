@@ -1,0 +1,35 @@
+module refactoring-inputs
+
+language EditorService
+
+fixture [[
+module Refactorings
+
+refactorings
+
+  refactoring : "r" = s input [[...]]
+]]
+
+test identifier with default init [[
+identifier : "foo"
+]] parse to IdInputField(String("\"foo\""),"")
+
+test identifier with init [[
+identifier : "foo" = "bar"
+]] parse to IdInputField(String("\"foo\""),String("\"bar\""))
+
+test text with default init [[
+text : "foo"
+]] parse to TextInputField(String("\"foo\""),"")
+
+test text with init [[
+text : "foo" = "bar"
+]] parse to TextInputField(String("\"foo\""),String("\"bar\""))
+
+test boolean with default init [[
+boolean : "foo"
+]] parse to BooleanInputField(String("\"foo\""),FalseValue())
+
+test boolean with init [[
+boolean : "foo" = true
+]] parse to BooleanInputField(String("\"foo\""),TrueValue())
