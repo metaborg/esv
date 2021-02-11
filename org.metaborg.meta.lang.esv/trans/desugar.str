@@ -1,0 +1,17 @@
+module desugar
+
+imports
+  
+  signatures/-
+
+strategies
+
+  desugar-all = topdown(try(desugar))
+
+rules
+
+  desugar: IdInputFieldDefault(name) -> IdInputField(name, "")
+  
+  desugar: TextInputFieldDefault(name) -> TextInputField(name, "")
+  
+  desugar: BooleanInputFieldDefault(name) -> BooleanInputField(name, FalseValue())

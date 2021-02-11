@@ -5,3 +5,5 @@ menus
   menu: "Syntax" (openeditor) (realtime) (meta) 
     
     action: "Show abstract syntax (for selection)" = generate-aterm
+    
+    action: "Show desugared abstract syntax (for selection)" = generate-desugared-aterm

@@ -18,8 +18,6 @@ pardonedLanguages:
 - Stratego-Sugar
 - SDF
 language:
-  sdf:
-    sdf2table: c
   stratego:
     format: jar
     args:

@@ -6,6 +6,7 @@ imports
   libspoofax/resource/cache
   libspoofax/resource/path
   signatures/-
+  desugar
 
 strategies
 
@@ -14,7 +15,7 @@ strategies
     where
       <is-main-descriptor-file> path
     with
-      packed-esv := <create-packed-descriptor(<read-definitions> esv)> esv;
+      packed-esv := <create-packed-descriptor(<read-definitions; desugar-all> esv)> esv;
       filename := $[[project-path]/target/metaborg/editor.esv.af]
 
   pack-main-descriptor-file:
