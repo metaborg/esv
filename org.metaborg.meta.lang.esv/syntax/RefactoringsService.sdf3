@@ -21,12 +21,12 @@ context-free syntax
   UIOption.Shortcut = <shortcut : <KeyCombination>> 
   UIOption.Shortcut = <shortcut : <InteractionId>> 
   InteractionId.InteractionId = String 
-  UIOption.UserInput = <input <InputField+>> 
-  InputField = <identifier : <String>> {ast("IdInputField(<1>, \"\")")}
+  UIOption.UserInput = <input <InputField+>>
+  InputField.IdInputFieldDefault = <identifier : <String>>
   InputField.IdInputField = <identifier : <String> = <String>> 
-  InputField = <text : <String>> {ast("TextInputField(<1>, \"\")")}
+  InputField.TextInputFieldDefault = <text : <String>>
   InputField.TextInputField = <text : <String> = <String>> 
-  InputField = <boolean : <String>> {ast("BooleanInputField(<1>, FalseValue()")}
+  InputField.BooleanInputFieldDefault = <boolean : <String>>
   InputField.BooleanInputField = <boolean : <String> = <BooleanValue>> {prefer}
   BooleanValue.TrueValue = <true> 
   BooleanValue.FalseValue = <false> 

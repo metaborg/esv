@@ -1,0 +1,49 @@
+module refactoring-inputs
+
+language EditorService
+
+fixture [[
+module Refactorings
+
+refactorings
+
+  refactoring : "r" = s input [[...]]
+]]
+
+test identifier with default init [[
+identifier : "foo"
+]] parse to IdInputFieldDefault(String("\"foo\""))
+
+test identifier with init [[
+identifier : "foo" = "bar"
+]] parse to IdInputField(String("\"foo\""),String("\"bar\""))
+
+test text with default init [[
+text : "foo"
+]] parse to TextInputFieldDefault(String("\"foo\""))
+
+test text with init [[
+text : "foo" = "bar"
+]] parse to TextInputField(String("\"foo\""),String("\"bar\""))
+
+test boolean with default init [[
+boolean : "foo"
+]] parse to BooleanInputFieldDefault(String("\"foo\""))
+
+test boolean with init [[
+boolean : "foo" = true
+]] parse to BooleanInputField(String("\"foo\""),TrueValue())
+
+// Desugaring
+
+test desugar identifier with default init [[
+identifier : "foo"
+]] run desugar-all to IdInputField(String("\"foo\""),"")
+
+test desugar text with default init [[
+text : "foo"
+]] run desugar-all to TextInputField(String("\"foo\""),"")
+
+test desugar boolean with default init [[
+boolean : "foo"
+]] run desugar-all to BooleanInputField(String("\"foo\""),FalseValue())

@@ -4,6 +4,7 @@ imports
 
   libstratego-lib
   libspoofax/term/origin
+  desugar
   pack
   outline
 
@@ -15,4 +16,10 @@ rules
   generate-aterm:
     (selected, position, ast, path, project-path) -> (filename, selected)
     where
+      filename  := <guarantee-extension(|"aterm")> path
+  
+  generate-desugared-aterm:
+    (selected, position, ast, path, project-path) -> (filename, selected')
+    where
+      selected' := <desugar-all> selected;
       filename  := <guarantee-extension(|"aterm")> path
