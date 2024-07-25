@@ -25,3 +25,11 @@ dependencies {
 
     compileOnly(libs.spoofax.core)
 }
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
+        }
+    }
+}
