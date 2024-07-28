@@ -1,0 +1,37 @@
+---
+repoOwner: "metaborg"
+repoName: "esv"
+mainBranch: "master"
+
+title: "ESV"
+description: |
+  The ESV language.
+inceptionYear: "2016"
+
+libraries:
+  - group: "org.metaborg"
+    name: "org.metaborg.meta.lang.esv"
+    description: "ESV language"
+
+developers:
+  - id: "lennartcl"
+    name: "Lennart Kats"
+  - id: "Gohla"
+    name: "Gabriel Konat"
+  - id: "hendrikvanantwerpen"
+    name: "Hendrik van Antwerpen"
+  - id: "maartje"
+    name: "Maartje de Jonge"
+  - id: "oskar-van-rest"
+    name: "Oskar van Rest"
+
+files:
+  githubWorkflows:
+    publishRelease: true
+    publishSnapshot: true
+  gradleRootProject:
+    createPublishTasks: true
+    rootProjectName: "esv-project"
+    includedProjects:
+      - name: ":org.metaborg.meta.lang.esv"
+
