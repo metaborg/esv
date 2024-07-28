@@ -1,4 +1,4 @@
-import org.metaborg.convention.Developer
+import org.metaborg.convention.Person
 import org.metaborg.convention.MavenPublishConventionExtension
 
 // Workaround for issue: https://youtrack.jetbrains.com/issue/KTIJ-19369
@@ -33,11 +33,11 @@ allprojects {
             metadata {
                 inceptionYear.set("2007")
                 developers.set(listOf(
-                    Developer("lennartcl", "Lennart Kats", "lclkats@gmail.com"),
-                    Developer("Gohla", "Gabriel Konat", "gabrielkonat@gmail.com"),
-                    Developer("hendrikvanantwerpen", "Hendrik van Antwerpen", "hendrik@van-antwerpen.net"),
-                    Developer("maartje", "Maartje de Jonge", "maartjedejonge@gmail.com"),
-                    Developer("oskar-van-rest", "Oskar van Rest", "oskarvanrest@gmail.com"),
+                    Person("lennartcl", "Lennart Kats", "lclkats@gmail.com"),
+                    Person("Gohla", "Gabriel Konat", "gabrielkonat@gmail.com"),
+                    Person("hendrikvanantwerpen", "Hendrik van Antwerpen", "hendrik@van-antwerpen.net"),
+                    Person("maartje", "Maartje de Jonge", "maartjedejonge@gmail.com"),
+                    Person("oskar-van-rest", "Oskar van Rest", "oskarvanrest@gmail.com"),
                 ))
             }
         }
