@@ -44,13 +44,12 @@ developers:
 
 files:
   githubWorkflows:
-    publishRelease: true
-    publishSnapshot: true
+    publishRelease: false
+    publishSnapshot: false
   gradleRootProject:
-    createPublishTasks: true
+    generate: true
     rootProjectName: "esv-project"
     includedProjects:
       - name: ":org.metaborg.meta.lang.esv"
-  githubIssueTemplates:
-    generate: false
+
 

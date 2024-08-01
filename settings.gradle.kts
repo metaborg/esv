@@ -1,4 +1,6 @@
-rootProject.name = "esv-project"
+// !! THIS FILE WAS GENERATED USING repoman !!
+// Modify `repo.yaml` instead and use `repoman` to update this file
+// See: https://github.com/metaborg/metaborg-gradle/
 
 dependencyResolutionManagement {
     repositories {
@@ -18,4 +20,5 @@ plugins {
     id("org.metaborg.convention.settings") version "latest.integration"
 }
 
-include("org.metaborg.meta.lang.esv")
+rootProject.name = "esv-project"
+include(":org.metaborg.meta.lang.esv")

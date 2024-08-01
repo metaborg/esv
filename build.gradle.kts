@@ -1,3 +1,7 @@
+// !! THIS FILE WAS GENERATED USING repoman !!
+// Modify `repo.yaml` instead and use `repoman` to update this file
+// See: https://github.com/metaborg/metaborg-gradle/
+
 import org.metaborg.convention.Person
 import org.metaborg.convention.MavenPublishConventionExtension
 
@@ -13,7 +17,6 @@ rootProjectConvention {
     // Add `publishAll` and `publish` tasks that delegate to the subprojects and included builds.
     registerPublishTasks.set(true)
 }
-
 allprojects {
     apply(plugin = "org.metaborg.gitonium")
 
@@ -21,7 +24,6 @@ allprojects {
     gitonium {
         mainBranch.set("master")
     }
-
     version = gitonium.version
     group = "org.metaborg.devenv"
 
@@ -31,13 +33,17 @@ allprojects {
             repoName.set("esv")
 
             metadata {
-                inceptionYear.set("2007")
+                inceptionYear.set("2016")
                 developers.set(listOf(
-                    Person("lennartcl", "Lennart Kats", "lclkats@gmail.com"),
-                    Person("Gohla", "Gabriel Konat", "gabrielkonat@gmail.com"),
-                    Person("hendrikvanantwerpen", "Hendrik van Antwerpen", "hendrik@van-antwerpen.net"),
-                    Person("maartje", "Maartje de Jonge", "maartjedejonge@gmail.com"),
-                    Person("oskar-van-rest", "Oskar van Rest", "oskarvanrest@gmail.com"),
+                    Person("Jeff Smits", email = null, id = "Apanatshka"),
+                ))
+                contributors.set(listOf(
+                    Person("Lennart Kats", email = null, id = "lennartcl"),
+                    Person("Gabriel Konat", email = null, id = "Gohla"),
+                    Person("Hendrik van Antwerpen", email = null, id = "hendrikvanantwerpen"),
+                    Person("Daniel A. A. Pelsmaeker", email = null, id = "Virtlink"),
+                    Person("Maartje de Jonge", email = null, id = "maartje"),
+                    Person("Oskar van Rest", email = null, id = "oskar-van-rest"),
                 ))
             }
         }
