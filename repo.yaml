@@ -2,28 +2,45 @@
 repoOwner: "metaborg"
 repoName: "esv"
 mainBranch: "master"
+mavenGroup: "org.metaborg.devenv"
 
 title: "ESV"
 description: |
   The ESV language.
 inceptionYear: "2016"
 
-libraries:
+spoofax3Languages:
+  - group: "org.metaborg.devenv"
+    name: "org.metaborg.meta.lang.esv"
+    description: "ESV language"
+
+spoofax2Languages:
   - group: "org.metaborg"
     name: "org.metaborg.meta.lang.esv"
     description: "ESV language"
 
-developers:
+spoofax2Libraries:
+  - group: "org.metaborg"
+    name: "org.metaborg.meta.lang.esv.eclipse"
+    description: "ESV Eclipse plugin"
+
+contributors:
   - id: "lennartcl"
     name: "Lennart Kats"
   - id: "Gohla"
     name: "Gabriel Konat"
   - id: "hendrikvanantwerpen"
     name: "Hendrik van Antwerpen"
+  - id: "Virtlink"
+    name: "Daniel A. A. Pelsmaeker"
   - id: "maartje"
     name: "Maartje de Jonge"
   - id: "oskar-van-rest"
     name: "Oskar van Rest"
+
+developers:
+  - id: "Apanatshka"
+    name: "Jeff Smits"
 
 files:
   githubWorkflows:
@@ -34,4 +51,6 @@ files:
     rootProjectName: "esv-project"
     includedProjects:
       - name: ":org.metaborg.meta.lang.esv"
+  githubIssueTemplates:
+    generate: false
 
